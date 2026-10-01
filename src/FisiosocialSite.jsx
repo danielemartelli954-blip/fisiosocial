@@ -2,11 +2,11 @@ import { useEffect, useRef, useState } from "react";
 import "./FisiosocialSite.css";
 
 const ASSET_ROOT = "https://www.fisiosocial.it/wp-content/uploads";
-const COMPANY_SLUG = import.meta.env.VITE_FISIOSOCIAL_COMPANY_SLUG || "fisiosocial";
+const COMPANY_SLUG = import.meta.env.VITE_FISIOSOCIAL_COMPANY_SLUG || "demofisiosocial";
+const DEFAULT_BOOKING_URL = "https://cypher-web-app-daniele-webc-ompany.vercel.app/prenota?company=demofisiosocial";
 
 function fisiosocialBookingHref() {
-  const configured = import.meta.env.VITE_FISIOSOCIAL_BOOKING_URL?.trim();
-  if (!configured) return "#prenotazione";
+  const configured = import.meta.env.VITE_FISIOSOCIAL_BOOKING_URL?.trim() || DEFAULT_BOOKING_URL;
 
   const url = new URL(configured, window.location.origin);
   url.searchParams.set("brand", "fisiosocial");
@@ -318,3 +318,4 @@ export default function FisiosocialSite() {
     </div>
   );
 }
+

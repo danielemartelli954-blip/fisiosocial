@@ -18,8 +18,8 @@ Il sito locale viene eseguito su `http://localhost:5174`.
 Impostare in `.env` il link completo copiato dal gestionale:
 
 ```env
-VITE_FISIOSOCIAL_BOOKING_URL=https://dominio-gestionale.it/prenota?company=fisiosocial
-VITE_FISIOSOCIAL_COMPANY_SLUG=fisiosocial
+VITE_FISIOSOCIAL_BOOKING_URL=https://cypher-web-app-daniele-webc-ompany.vercel.app/prenota?company=demofisiosocial
+VITE_FISIOSOCIAL_COMPANY_SLUG=demofisiosocial
 ```
 
 Il sito aggiunge automaticamente i parametri `brand=fisiosocial` e
@@ -35,3 +35,4 @@ Creare un nuovo progetto Vercel con questa cartella come Root Directory:
 - Output Directory: `dist`
 
 Configurare le due variabili d'ambiente prima del deploy di produzione.
+
